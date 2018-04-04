@@ -101,5 +101,5 @@ eCommerce
 
 /* SELECT * FROM Orders */
 
-/* SELECT Sum(price) as Total FROM Orders o JOIN Products p ON o.Productid = p.ProductId WHERE price IS NOT null   */
+SELECT u.Username,Sum(p.price) as Total FROM Users u JOIN Orders o ON u.Userid = o.ProductId JOIN Products p ON p.ProductId = o.ProductId GROUP BY u.Username
 
